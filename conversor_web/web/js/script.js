@@ -40,11 +40,9 @@ function convertirMoneda(precioDivisa) {
     let parametrosConversion = new URLSearchParams(datosConversion);
 
     // Secrea la URL del servicio
-    const baseURL = "/conversorMonetario/conversor_web/web/api/convertir/convertirMoneda";
-    const fullURL = `${window.location.origin}${baseURL}?${parametrosConversion}`;
+    const URL = "https://erickriver.github.io/conversorMonetario/conversor_web/web/api/convertir/convertirMoneda";
 
-
-    fetch(fullURL)
+    fetch(URL)
             .then(rawData => {
                 return rawData.json();
             })
